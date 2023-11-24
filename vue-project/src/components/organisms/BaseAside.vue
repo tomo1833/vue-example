@@ -8,6 +8,7 @@ import AsideMenu from '@/components/molecuels/AsideMenu.vue'
       <AsideMenu class="py-2" text="ホーム" linkPath="/" />
       <AsideMenu text="アニメ" linkPath="/anime" />
       <AsideMenu text="折れ線グラフ" linkPath="/line" />
+      <AsideMenu text="TODO" linkPath="/todo" />
     </div>
   </aside>
 </template>
