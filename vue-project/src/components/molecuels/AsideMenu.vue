@@ -10,7 +10,7 @@ const props = defineProps({
   /**
    * リンクパス.
    */
-  linkPath: { type: String, required: true },
+  linkPath: { type: String, required: true, default: '/' },
 
   /**
    * divタグのclass.
@@ -20,7 +20,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <div :class:="props.customClass" class="py-4">
+  <div :class="['py-1', props.customClass]">
     <RouterLink :to="props.linkPath">
       <CustomLabel class="text-2xl" :text="props.text" />
     </RouterLink>

@@ -1,5 +1,7 @@
 <script setup lang="ts">
+import CustomButton from '@/components/atoms/CustomButton.vue'
 import BaseTemplate from '@/components/templates/BaseTemplate.vue'
+
 import { ref } from 'vue'
 
 const inputValue = ref<string>('') // 初期値は空にしておく
@@ -28,12 +30,12 @@ const clickDeleteEvent = (index: number) => {
     <template v-slot:mslot>
       <section>
         <input v-model="inputValue" type="text" placeholder="値を入力" />
-        <button type="button" @click="clickAddEvent">登録</button>
+        <CustomButton text="登 録" customClass="py-2 px-2" @click="clickAddEvent" />
         <ul>
           <li v-for="(todo, index) in todoList" :key="index">
             <input type="checkbox" v-model="todo.isDone" />
             <span :class="{ done: todo.isDone }">{{ todo.title }}</span>
-            <button type="button" @click="clickDeleteEvent(index)">削除</button>
+            <CustomButton text="削 除" customClass="px-2" @click="clickDeleteEvent(index)" />
           </li>
         </ul>
       </section>

@@ -13,5 +13,5 @@ const props = defineProps({
 </script>
 
 <template>
-  <span :class="props.customClass" class="base-text">{{ props.text }}</span>
+  <span :class="['base-text', props.customClass]">{{ props.text }}</span>
 </template>
