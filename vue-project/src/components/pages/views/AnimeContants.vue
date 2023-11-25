@@ -11,13 +11,13 @@ const screenStore = useScreenStore()
 const apiUrl = 'http://localhost:8000/anime/?format=json'
 
 const responseData = ref(null)
-const loadingFlag = ref<boolean>(false)
 
 const dataLoaded = ref(false)
 
 const fetchData = async () => {
   try {
     const response = await axios.get(apiUrl)
+    console.log(response)
     responseData.value = response.data
   } catch (e) {
     screenStore.handleFetchError(e)
@@ -57,7 +57,7 @@ const getActor = (metadata) => {
       </div>
     </template>
     <template v-slot:mslot>
-      <div v-if="loadingFlag">
+      <div v-if="dataLoaded">
         <!-- responseData がオブジェクトであり、recor プロパティがあることを確認 -->
         <div class="p-4" v-for="(item, index) in responseData?.record || []" :key="index">
           <!-- metadata オブジェクトがあり、"schema:name" プロパティがあることを確認 -->

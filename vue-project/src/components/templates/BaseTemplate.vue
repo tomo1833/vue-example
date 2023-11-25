@@ -2,7 +2,7 @@
 import BaseHeder from '@/components/organisms/BaseHeader.vue'
 import BaseAside from '@/components/organisms/BaseAside.vue'
 import BaseMain from '@/components/organisms/BaseMain.vue'
-import BaseOverlay from '../organisms/BaseOverlay.vue'
+import BaseOverlay from '@/components/organisms/BaseOverlay.vue'
 </script>
 
 <template>
