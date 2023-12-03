@@ -9,6 +9,8 @@ import AsideMenu from '@/components/molecuels/AsideMenu.vue'
       <AsideMenu text="アニメ" customClass="p-4" linkPath="/anime" />
       <AsideMenu text="折れ線グラフ" customClass="p-4" linkPath="/line" />
       <AsideMenu text="TODO" customClass="p-4" linkPath="/todo" />
+      <AsideMenu text="クイズ" customClass="p-4" linkPath="/quize" />
+      <AsideMenu text="会議室予約システム" customClass="p-4" linkPath="/mars" />
     </div>
   </aside>
 </template>
